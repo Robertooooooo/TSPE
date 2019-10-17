@@ -65,6 +65,8 @@ end
         vec1=[vec1 sdf{i}];
         vec2=[vec2 i*ones(1,length(sdf{i}))];
     end
+    vec1=double(int64(vec1));
+    vec2=double(int64(vec2));
     mat=sparse(vec1(vec1>0 & vec1 <= a(2)),vec2(vec1>0 & vec1 <= a(2)),1,a(2),a(1));
     NrS=a(2);   
     
